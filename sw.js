@@ -1,5 +1,5 @@
 // Guarda o teleprompter no iPad para abrir sem internet depois da primeira visita.
-const CACHE = 'teleprompter-elaine-eder-v1';
+const CACHE = 'teleprompter-elaine-eder-v2';
 const FILES = ['./', './index.html'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));

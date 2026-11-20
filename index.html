@@ -50,7 +50,7 @@ body:not(.js) .gear,body:not(.js) .fsb{display:none}
 .badge{font-weight:700;font-size:14px;padding:5px 13px;border-radius:999px;border:1.5px solid var(--dim);color:var(--mut);white-space:nowrap;text-transform:uppercase;letter-spacing:.03em}
 .badge.fala{background:var(--acc);border-color:var(--acc);color:#0b0b0c}
 .stage{overflow:hidden;padding-top:calc(var(--u) * .45);position:relative;touch-action:pan-y}
-.fit{max-width:1180px;display:flow-root;padding-bottom:2px}
+.fit{max-width:1180px;display:flow-root;padding-bottom:2px;padding-left:16px}
 .q,.x,ol.o,.r i{font-family:Lit,Georgia,serif}
 .q{font-size:var(--u);line-height:1.38;margin:0 0 calc(var(--u) * .55)}
 .x{font-size:calc(var(--u) * 1.14);font-weight:600;line-height:1.25;margin:0 0 calc(var(--u) * .5)}
@@ -69,9 +69,11 @@ ol.o li::marker{color:var(--mut)}
 .p{text-align:center;color:var(--dim);font-weight:700;font-size:max(13px,calc(var(--u) * .38));letter-spacing:.1em;margin:0 0 calc(var(--u) * .45)}
 .nm{color:var(--name);font-weight:600}
 body.cur .bt{transition:opacity .25s}
-body.cur .bt.past{opacity:.32}
-body.cur .bt.fut{opacity:.6}
+body.cur .bt{position:relative}
+body.cur .bt.past{opacity:.62}
+body.cur .bt.fut{opacity:.86}
 body.cur .bt.now{opacity:1}
+body.cur .bt.now::before{content:"";position:absolute;left:-14px;top:.18em;bottom:.18em;width:5px;border-radius:3px;background:var(--acc)}
 @media(prefers-reduced-motion:reduce){body.cur .bt{transition:none}}
 .bot{display:flex;align-items:center;gap:14px;border-top:1.5px solid var(--line);padding-top:8px}
 .pv{font-size:15px;color:var(--mut);border:1.5px solid var(--dim);border-radius:12px;padding:12px 16px;min-height:48px;display:flex;align-items:center;white-space:nowrap}
